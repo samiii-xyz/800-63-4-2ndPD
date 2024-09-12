@@ -527,7 +527,7 @@
   <dd>フェデレーション・プロトコルで提示されるアサーションは、特定の RP を対象としており、 RP は、その RP がアサーションの意図された対象者であることを確認できる。</dd>
   <dt>インジェクション・プロテクション</dt>
   <dd>RPは、攻撃者が現在のフェデレーション・トランザクション・リクエスト以外の状況でアサーションを提 示することから強く保護される。(インジェクション保護の詳細については、<a href="/800-63-4-2ndPD/sp800-63c/Federation/#injection-protection">第 3.10.1 節を</a>参照のこと)。</dd>
-  <dt>信託契約の成立</dt>
+  <dt>Trust Agreementの成立</dt>
   <dd>RPでサブスクライバーの認証セッションを作成する目的で、フェデレーショントランザクショ ンに参加する合意。(トラスト契約の詳細については<a href="/800-63-4-2ndPD/sp800-63c/Federation/#trust-agreement">セクション3.4を</a>参照のこと)。</dd>
   <dt>識別子と鍵の確立</dt>
   <dd>IdP と RP は、将来のフェデレーション・トランザクション中にアサーションおよび他の成果物の検 証を可能にするために、識別子と鍵資料を交換した。(鍵の確立の詳細については、<a href="/800-63-4-2ndPD/sp800-63c/Federation/#identifiers-keys">第 3.5 節を</a>参照されたい。）</dd>
@@ -537,7 +537,7 @@
 
 <p><a href="/800-63-4-2ndPD/sp800-63c/fal/#table-1">表 1</a>は、各 FAL の側面の非規範的な要約を提供する。連続する各レベルは、下位レベルのすべての要件を包含し、満たす（例えば、FAL3 のフェデレーション・プロセスは、FAL3 がこれら下位レベルのすべての要件を満たすため、FAL2 または FAL1 で受け入れられる）。<a href="/800-63-4-2ndPD/sp800-63c/fal/#table-1">表 1</a>にない組み合わせも可能であり、機関は、所与の FAL において、要件の 1 つまたは複数の分野でより強力な保護を実施することを選択できる。</p>
 
-<p latex-ignore="true"><a href="/800-63-4-2ndPD/sp800-63c/fal/#table-1" name="table-1">表 1.連盟のアサーション・レベル</a></p>
+<p latex-ignore="true"><a href="/800-63-4-2ndPD/sp800-63c/fal/#table-1" name="table-1">表 1.フェデレーションのアサーション・レベル</a></p>
 
 <table latex-table="1" latex-caption="Federation Assurance Levels">
   <thead>
@@ -601,7 +601,7 @@
 
 <p>IdP 及び RP は，本ガイドラインが保護に使用される情報システム，アプリケーション及びオンラインサ ービスに対して，組織が決定した<a href="/800-63-4-2ndPD/sp800-63c/references/#ref-SP800-53">[SP800-53]</a>又は同等の連邦標準（例えば，<a href="/800-63-4-2ndPD/sp800-63c/references/#ref-FEDRAMP">[FEDRAMP]</a>）若しくは業 界標準に定義された中程度の基本セキュリティ管理から，適切に調整されたセキュリティ管理を採用<strong>しなけ ればならない</strong>。IdP および RP は、適切なシステムまたは同等のシステムの最低保証関連管理が満たされていることを 保証<strong>しなければならない（SHALL）</strong>。追加のセキュリティ管理については、<a href="/800-63-4-2ndPD/sp800-63c/Federation/#security-controls">第 3.10 節で</a>説明する。</p>
 
-<p>信託契約または連盟取引によってFALが指定されていない場合でも、本項の要件が適用される。</p>
+<p>Trust Agreementまたはフェデレーション取引によってFALが指定されていない場合でも、本項の要件が適用される。</p>
 
 <p>IdP または RP は、ユースケースとニーズに応じて、複数の FAL で同時に運用できる。たとえば、IdP は、高リスクの RP に FAL3 のフェデレーション・トランザクションを提供する一方で、低リスク・プロ ファイルを持つ RP に FAL2 を提供することができる。同様に、RP は、通常のアクションには FAL2 を要求するが、影響度の高い、または機密性の高いアクションには FAL3 での再認証を加入者に要求することができる。IdP は、同時に、任意の IAL でプルーフされた加入者アカウントにアクセスでき、任意の AAL での認証を許可できるため、この能力は他の次元にも及ぶ。しかし、その IdP と会話する RP は、アクセスに受け入れる最低の IAL および AAL に制限を持つ可能性がある。結果として、さまざまなユースケースで許可され、要求される xAL をトラスト合意で確立することが必須である。</p>
 <h2 id="fal1" data-section="2">
@@ -618,7 +618,7 @@
 
 <p>FAL1 でのすべてのアサーションは、特定の RP または RP のセットに視聴者を限定<strong>しなければならず</strong>、 RP は、指定されたアサーションについて、対象となる RP の 1 つであることを検証<strong>しなければならない（SHALL）</strong>。</p>
 
-<p>FAL1 では、フェデレーショントランザクション中に加入者によって信頼合意が確立<strong>されてもよい （MAY）</strong>。FAL1 では、RP と IdP が事前にトラスト合意を確立することも可能であることに注意。</p>
+<p>FAL1 では、フェデレーショントランザクション中に加入者によってTrust Agreementが確立<strong>されてもよい （MAY）</strong>。FAL1 では、RP と IdP が事前にトラスト合意を確立することも可能であることに注意。</p>
 
 <p>FAL1において、フェデレーションプロトコルは、<a href="/800-63-4-2ndPD/sp800-63c/Federation/#injection-protection">セクション3.10.</a>1で議論されているように、 インジェクション保護を適用<strong>すべきである[SHOULD]</strong>。フェデレーショントランザクションはRPによって開始さ<strong>れるべきである(SHOULD)</strong>。</p>
 <h2 id="fal2" data-section="2">
@@ -635,7 +635,7 @@
 
 <p>FAL2 では、アサーションは単一の RP に制限される<strong>ものとする</strong>。</p>
 
-<p>FAL2 では、フェデレーショントランザクションが行われる前に、アプリオリ信頼合意が確立 さ<strong>れなければならない[SHALL]</strong>。</p>
+<p>FAL2 では、フェデレーショントランザクションが行われる前に、アプリオリTrust Agreementが確立 さ<strong>れなければならない[SHALL]</strong>。</p>
 
 <p>FAL2 以上のアサーションを提示する連邦機関により、または連邦機関のために運営される IdP は<strong>、</strong> <a href="/800-63-4-2ndPD/sp800-63c/references/#ref-FIPS140">[FIPS140]</a>レベル 1 以上で検証されたメカニズムにより、当該アサーションの署名または暗号化に使用される鍵を保護<strong>しなければならない</strong>。</p>
 <h2 id="fal3" data-section="2">
@@ -670,12 +670,12 @@
 <ul>
   <li>RP に提示される加入者口座の IAL、または IAL の請求が行われていないことを示す表示。</li>
   <li>IdP におけるサブスクライバの現在アクティブなセッションの AAL、または AAL 要求が行われていないことを示す表示。</li>
-  <li>連盟取引のFAL</li>
+  <li>フェデレーション取引のFAL</li>
 </ul>
 
 <p>RP は、この xAL 情報を、<a href="/800-63-4-2ndPD/sp800-63c/Federation/#trust-agreement">第 3.4 節に</a>記載されるTrust Agreementの条件と、<a href="/800-63-4-2ndPD/sp800-63c/GenIdP/#assertions">第 4.9 節</a>および<a href="/800-63-4-2ndPD/sp800-63c/Wallets/#assertion-contents">第 5.8 節に</a>記載されるアサーションに 含まれる情報との組み合わせから取得する。xAL が IdP と RP 間のすべてのメッセージについて不変である場合、xAL 情報は<strong>、</strong>IdP と RP 間のTrust Agreementの条件に含ま<strong>れなければならない（SHALL）</strong>。xAL がTrust Agreementで指定された可能な値の範囲内にある可能性がある場合、xAL 情報はアサーション内容の 一部として<strong>含めなければならない（SHALL）</strong>。</p>
 
-<p>IdP は、指定されたフェデレーション・トランザクションの IAL または AAL に対してクレームがない<strong>ことを示してもよい（MAY）</strong>。そのような場合、RP は、結果として生じる xAL にデフォルト値を割り当てない。すなわち、信託契約またはアサーションのいずれかに IAL 宣言がないフェデレーション・トランザクショ ンは、機能的に「IAL がない」とみなされ、RP はアカウントが本スイートで記述される最低番号の IAL である「IAL1」を満たすと仮定することはできない。</p>
+<p>IdP は、指定されたフェデレーション・トランザクションの IAL または AAL に対してクレームがない<strong>ことを示してもよい（MAY）</strong>。そのような場合、RP は、結果として生じる xAL にデフォルト値を割り当てない。すなわち、Trust Agreementまたはアサーションのいずれかに IAL 宣言がないフェデレーション・トランザクショ ンは、機能的に「IAL がない」とみなされ、RP はアカウントが本スイートで記述される最低番号の IAL である「IAL1」を満たすと仮定することはできない。</p>
 
 <p>RP は、提供される機能へのアクセスについて、受け入れ可能な最低限の IAL、AAL、および FAL を決定<strong>しなければならない（SHALL）</strong>。RP は、特定のフェデレーション認証の IAL、AAL、および FAL に基づいて、その機能を変えて<strong>もよい（MAY）</strong>。たとえば、RP は、一般的な機能（ダム・システムのステータスの表示など）については AAL2 でのフェデレーション・トランザクションを許可できるが、よりリスクの高い機能（ダム・システムの流量の変更など）については AAL3 の使用を要求できる。同様に、RP は、IAL2 で身元証明された特定の加入者アカウントのみに管理機能を制限できるが、 IAL に関係なくすべての加入者アカウントからのフェデレーショントランザクションを許可できる。</p>
 
@@ -686,7 +686,7 @@
 <h1 id="common" data-section="3">
   
   
-    連盟の共通要件 <a href="#common" class="header-link"><i class="fa fa-link"></i></a>
+    フェデレーションの共通要件 <a href="#common" class="header-link"><i class="fa fa-link"></i></a>
   
   
 </h1>
@@ -731,7 +731,7 @@
 <p>フェデレーションの取引は、3つの次元にわたって行われる：</p>
 
 <dl>
-  <dt>信託契約：</dt>
+  <dt>Trust Agreement：</dt>
   <dd>フェデレーションを目的として、CSP、IdP、および RP の接続を許可するポリシー決定の確立。このポリシーは、接続の許可を確立するTrust Agreementによって管理される。</dd>
   <dt>キーと識別子の関連付け：</dt>
   <dd>フェデレーション・トランザクションに参加する CSP、IdP、および RP の鍵と識別子の関連付け。このプロセスにより、当事者は将来の交換のために互いを安全に識別できるようになる。</dd>
@@ -801,9 +801,9 @@
   
 </h3>
 
-<p>Trust Agreement（<a href="/800-63-4-2ndPD/sp800-63c/Federation/#trust-agreement">第 3.4 項を</a>参照）は、<em>フェデレーション・オーソリティと</em>呼ばれる専用の当事者を通じて管 理することができる。フェデレーション・オーソリティは、信託契約内で異なる役割と機能を果たす当事者のオンボーディングと管理を容易にする。この管理により、契約内の他の当事者への推移的信頼が提供される。</p>
+<p>Trust Agreement（<a href="/800-63-4-2ndPD/sp800-63c/Federation/#trust-agreement">第 3.4 項を</a>参照）は、<em>フェデレーション・オーソリティと</em>呼ばれる専用の当事者を通じて管 理することができる。フェデレーション・オーソリティは、Trust Agreement内で異なる役割と機能を果たす当事者のオンボーディングと管理を容易にする。この管理により、契約内の他の当事者への推移的信頼が提供される。</p>
 
-<p>たとえば、RP は、フェデレーション機関とTrust Agreementを締結し、そのフェデレーション機関が 承認した IdP はその目的に適していると判断することができる。この信頼は、RP が加入した時点でその IdP が信頼協定の対象であったか否かにかかわらず、成立する。フェデレーション機関は、<a href="/800-63-4-2ndPD/sp800-63c/Federation/#authorities">3.4.2 節で</a>説明するように、多国間信託契約で使用される。</p>
+<p>たとえば、RP は、フェデレーション機関とTrust Agreementを締結し、そのフェデレーション機関が 承認した IdP はその目的に適していると判断することができる。この信頼は、RP が加入した時点でその IdP が信頼協定の対象であったか否かにかかわらず、成立する。フェデレーション機関は、<a href="/800-63-4-2ndPD/sp800-63c/Federation/#authorities">3.4.2 節で</a>説明するように、多国間Trust Agreementで使用される。</p>
 <h3 id="authorized-party" data-section="3">
   
   
@@ -820,7 +820,7 @@
 <h3 id="proxied" data-section="3">
   
   
-    代理連盟 <a href="#proxied" class="header-link"><i class="fa fa-link"></i></a>
+    プロキシされたフェデレーション <a href="#proxied" class="header-link"><i class="fa fa-link"></i></a>
   
   
 </h3>
@@ -906,7 +906,7 @@
 
 <p>PPI は、サブスクライバの識別情報(例えば、ユーザ名、電子メールアドレス、従業員番号など)を 含まない<strong>ものとする</strong>。PPI は、<a href="/800-63-4-2ndPD/sp800-63c/references/#ref-SP800-131A">[SP800-131A]</a>に記載されているように、少なくとも 112 ビットのエントロピーを有し、加入者 に関する情報にアクセスできる当事者による推測が困難で<strong>なければならない（SHALL）</strong>。PPI は、ランダムに生成され、IdP によって加入者に割り当てられるか、または、不可逆的で推測不可能な方法（例えば、<a href="/800-63-4-2ndPD/sp800-63c/references/#ref-SP800-131A">[SP800-131A]</a>で議論されているように、秘密鍵による鍵付きハッシュ関数を使用する）で導出が行われる場合、他の加入者情報から導出され得る。</p>
 
-<p>信託契約により PPI が共有と指定されない限り、PPI は単一の RP にのみ開示さ<strong>れなければならない</strong>。</p>
+<p>Trust Agreementにより PPI が共有と指定されない限り、PPI は単一の RP にのみ開示さ<strong>れなければならない</strong>。</p>
 <h4 id="ppi-shared" data-section="3">
   
   
@@ -918,7 +918,7 @@
 <p>同じ共有PPIを特定のRPセットに使用<strong>しなければならない(SHALL)：</strong></p>
 
 <ul>
-  <li>信託契約では、特定のRPの共有PPIが規定されている；</li>
+  <li>Trust Agreementでは、特定のRPの共有PPIが規定されている；</li>
   <li>権限を付与された当事者は、共有PPIの使用に同意し、通知される；</li>
   <li>これらのRPは、セキュリティドメインの共有や法的所有権の共有など、相関の運用上の必 要性を正当化する実証可能な関係を有する。</li>
   <li>共有 PPI のセットに含まれるすべての RP は、このような方法で相関されることに同意する(すなわち、ある RP は、他の RP の PPI を、その他の RP の認識と同意なしに要求することはできない)。</li>
@@ -932,14 +932,14 @@
 <h2 id="trust-agreement" data-section="3">
   
   
-    信託契約 <a href="#trust-agreement" class="header-link"><i class="fa fa-link"></i></a>
+    Trust Agreement <a href="#trust-agreement" class="header-link"><i class="fa fa-link"></i></a>
   
   
 </h2>
 
 <p>すべてのフェデレーション・トランザクションは、該当する当事者間の一つ以上の信頼協定によって定義さ<strong>れなけれ ばならない（SHALL）</strong>。</p>
 
-<p>信託契約は<strong>、</strong>RPとの間に信頼関係を確立<strong>しなければならない（SHALL）</strong>：</p>
+<p>Trust Agreementは<strong>、</strong>RPとの間に信頼関係を確立<strong>しなければならない（SHALL）</strong>：</p>
 
 <ul>
   <li>加入者アカウントのプロビジョニングおよび管理を担当する CSP、</li>
@@ -949,36 +949,36 @@
 
 <p>トラスト合意は、フェデレーション・トランザクションで交換される ID 属性の許可された xAL や意図された目的など、影響を及ぼす当事者間のフェデレーション・トランザクショ ンの条件を確立する。信頼協定は、フェデレーション・トランザクションのユーザビリティ要件および衡平性要件を確立<strong>しなければならない（SHALL）</strong>。Trust Agreementは、補償制御および例外処理プロセスを含め、CSP で使用される証明プロセスの詳細を開示<strong>しなければならない（SHALL）</strong>。</p>
 
-<p>すべての信託契約は、契約が適用される加入者アカウントの特定の集団を定義<strong>しなければならな い（SHALL）</strong>。この集団を定義する正確な手段は、本文書の範囲外である。多くの場合、母集団は、CSP が管理し、IdP を通じて利用可能にするサブスクライバ・アカウントの全セットとして定義される。他のケースでは、母集団は、IdP を通じて利用可能なアカウントの区分されたサブセットである。RP が、加入者主導のTrust Agreementなど、単一の加入者アカウントのために IdP と別個のTrust Agreementを確立することも可能である。</p>
+<p>すべてのTrust Agreementは、契約が適用される加入者アカウントの特定の集団を定義<strong>しなければならな い（SHALL）</strong>。この集団を定義する正確な手段は、本文書の範囲外である。多くの場合、母集団は、CSP が管理し、IdP を通じて利用可能にするサブスクライバ・アカウントの全セットとして定義される。他のケースでは、母集団は、IdP を通じて利用可能なアカウントの区分されたサブセットである。RP が、加入者主導のTrust Agreementなど、単一の加入者アカウントのために IdP と別個のTrust Agreementを確立することも可能である。</p>
 
 <p>一つのフェデレーション・トランザクションの間、すべての関係者のポリシーと期待が曖昧でないことが重要である。したがって、所定のトランザクションで有効な信頼アグリーメントのセットは 1 つだけである<strong>べきである（SHOULD）</strong>。これは通常、トランザクショ ンに参加する CSP、IdP、および RP の固有の組み合わせによって決定される。しかし、これらのアグリーメントは、加入者の異なる集団が異なる信頼アグリーメントに支配されるなど、他の方法で異なる可能性がある。</p>
 
-<p>当事者間に信頼協定が存在することは、当該協定における各当事者が他の当事者と有する他の協定の存在を排除するものではない。例えば、IdP は複数の RP と同時に独立した契約を締結することができ、RP も同様に複数の IdP と同時に独立した契約を締結することができる。IdP及びRPは、当該契約の対象外又は対象外の当事者に対して、信託契約の存在又は条件を開示する必要はない。</p>
+<p>当事者間に信頼協定が存在することは、当該協定における各当事者が他の当事者と有する他の協定の存在を排除するものではない。例えば、IdP は複数の RP と同時に独立した契約を締結することができ、RP も同様に複数の IdP と同時に独立した契約を締結することができる。IdP及びRPは、当該契約の対象外又は対象外の当事者に対して、Trust Agreementの存在又は条件を開示する必要はない。</p>
 
-<p>信託契約は、連携関係に関連して予想され、許容される IALs および AALs に関する条件を<strong>定めなければならない（SHALL）</strong>。</p>
+<p>Trust Agreementは、連携関係に関連して予想され、許容される IALs および AALs に関する条件を<strong>定めなければならない（SHALL）</strong>。</p>
 
 <p>信頼協定は、<a href="/800-63-4-2ndPD/sp800-63c/Federation/#redress">第3.4.3節で</a>議論されるように、フェデレーション内の異なる参加者間で救済と問題を調整するために必要な仕組みと資料を定義<strong>しなければならない（SHALL）</strong>。</p>
 
-<p>すべてのフェデレーション・トランザクションでは、役割とアプリケーションが単一のセキュリティ・ドメインまたは共有法的所有権内に存在する場合でも、Trust Agreementの確立が必要である。このような場合、信頼協定の確立は内部プロセスとすることができ、正式な合意を伴う必要はない。このような場合であっても、IdP は、要求に応じて、信頼合意を文書化し、加入者に開示することが要求される。</p>
+<p>すべてのフェデレーション・トランザクションでは、役割とアプリケーションが単一のセキュリティ・ドメインまたは共有法的所有権内に存在する場合でも、Trust Agreementの確立が必要である。このような場合、信頼協定の確立は内部プロセスとすることができ、正式な合意を伴う必要はない。このような場合であっても、IdP は、要求に応じて、Trust Agreementを文書化し、加入者に開示することが要求される。</p>
 
-<p>一般的に加入者は信託契約の条項に直接関与する当事者ではないにもかかわらず、加入者は信託契約の条項とその結果生じる連盟取引の影響を受ける。そのため、信託契約の条項は、明確で理解しやすい言葉で加入者が利用できるようにする必要がある。加入者がこれらの条件にアクセスできる手段、および加入者に通知する責任を負う当事者は、信託契約の確立手段および信託契約自体の条件によって異なる。さらに、加入者のユーザーエージェントは、フェデレーショントランザ クションの役割の 1 つで動作しない限り、通常、Trust Agreementの当事者ではない。</p>
+<p>一般的に加入者はTrust Agreementの条項に直接関与する当事者ではないにもかかわらず、加入者はTrust Agreementの条項とその結果生じるフェデレーション取引の影響を受ける。そのため、Trust Agreementの条項は、明確で理解しやすい言葉で加入者が利用できるようにする必要がある。加入者がこれらの条件にアクセスできる手段、および加入者に通知する責任を負う当事者は、Trust Agreementの確立手段およびTrust Agreement自体の条件によって異なる。さらに、加入者のユーザーエージェントは、フェデレーショントランザ クションの役割の 1 つで動作しない限り、通常、Trust Agreementの当事者ではない。</p>
 <h3 id="bilateral" data-section="3">
   
   
-    二国間信託契約 <a href="#bilateral" class="header-link"><i class="fa fa-link"></i></a>
+    二国間Trust Agreement <a href="#bilateral" class="header-link"><i class="fa fa-link"></i></a>
   
   
 </h3>
 
 <p>二者間トラスト契約では、トラスト契約の確立は連携当事者間で直接行われ、トラスト契約は別個 の当事者によって管理または促進されない。二者間トラスト合意は、サービスへの連携 ID アクセスを提供したい組織間でポイント・ツー・ ポイント接続を確立することを可能にする。二者間接続は、静的契約による大規模なエンタープライズ・アプリケーションや、未知の RP への加入者主導の動的接続など、さまざまな形態を取ることができる。いずれの場合も、CSP、IdP、および RP は、連携接続に関するポリシーを直接管理する。</p>
 
-<p>二国間信託契約では、信託契約そのものを成立させるために必要な要件以上の追加要件は課されない。</p>
+<p>二国間Trust Agreementでは、Trust Agreementそのものを成立させるために必要な要件以上の追加要件は課されない。</p>
 
 <div latex-literal="true" class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>\クリアページ</code></pre></div></div>
 <h3 id="authorities" data-section="3">
   
   
-    多国間信託契約 <a href="#authorities" class="header-link"><i class="fa fa-link"></i></a>
+    多国間Trust Agreement <a href="#authorities" class="header-link"><i class="fa fa-link"></i></a>
   
   
 </h3>
@@ -987,11 +987,11 @@
 
 <p>どのような役割であれ、当事者をオンボーディングする際、フェデレーション機関は、その当事者がトラスト 契約の原則に準拠していることを検証するために、その当事者について審査を実施する。審査のレベルは、フェデレーション内で採用されるユースケースとモデルに固有であり、詳細は本文書の範囲外である。この審査は<a href="/800-63-4-2ndPD/sp800-63c/Federation/#fig-2">図 2</a> に示されている。</p>
 
-<p latex-ignore="true"><a href="/800-63-4-2ndPD/sp800-63c/Federation/#fig-2" name="fig-2">図 2.連盟の権限</a></p>
+<p latex-ignore="true"><a href="/800-63-4-2ndPD/sp800-63c/Federation/#fig-2" name="fig-2">図 2.フェデレーションの権限</a></p>
 
 <p><img src="/800-63-4-2ndPD/sp800-63c/images/authority.png" alt="Diagram of a federation authority facilitating trust agreement terms for a variety of parties under the federation authority." title="Federation Authority" latex-src="authority.pdf" latex-fig="2" latex-place="h" /></p>
 
-<p>信託契約は，すべての当事者を審査するために要求される実務を列挙し，審査プロセスを実行する責任を負う当事者または当事者を<strong>示さなければ</strong> <strong>ならない（SHALL）</strong>。</p>
+<p>Trust Agreementは，すべての当事者を審査するために要求される実務を列挙し，審査プロセスを実行する責任を負う当事者または当事者を<strong>示さなければ</strong> <strong>ならない（SHALL）</strong>。</p>
 
 <p>CSP、IdP、および RP の審査は、最低限、以下を確立<strong>しなければならない（SHALL）</strong>：</p>
 
@@ -1006,7 +1006,7 @@
 
 <p>フェデレーション機関は、Trust Agreementに基づく当事者が、Trust Agreementに基づく他の当事者のメンバーシップ を検証するためのプログラム手段を<strong>提供してもよい（MAY）</strong>。たとえば、フェデレーション機関は、システム内の RP に ID を提供するための IdP の検証された能力を提供する発見 API を提供することもできるし、登録ステップ中に RP が IdP に提示するための署名された証明書を提供することもできる。</p>
 
-<p>連盟当局は<strong>、</strong>信託契約に開示されている条件で、会員が遵守しているかどうかを定期的に再評価<strong>しな ければならない</strong>。</p>
+<p>フェデレーション当局は<strong>、</strong>Trust Agreementに開示されている条件で、会員が遵守しているかどうかを定期的に再評価<strong>しな ければならない</strong>。</p>
 
 <p>加入者アカウントの不正行為が疑われる場合など、CSP 間で情報を共有する必要がある場合、フェデレーション当局はこの情報の転送に適用されるポリシーを定義できる。この方法で情報を共有することは、不正行為を軽減するために使用できる一方で、プライバシーの重大な懸念もある。フェデレーション機関は、ID 目的以外の当事者間のすべての情報共有をプライバシー・リスク評 価に<strong>含めなければならない（SHALL）</strong>。</p>
 
@@ -1094,7 +1094,7 @@
 
 <p>加入者の属性は、フェデレーショントランザクションのため、または<a href="/800-63-4-2ndPD/sp800-63c/Federation/#privacy-reqs">第 3.9 節で</a>議論される危殆化した加入者アカウントの識別のようなサポート機能のためにのみ、IdP と RP の間で伝送さ<strong>れなければならない（SHALL）</strong>。加入者の属性は、当事者が許可リストに掲載されている場合であっても、他の目的で<strong>伝送してはなら ない（SHALL NOT）</strong>。</p>
 
-<p>加入者の属性は、RPが信託契約に規定された目的以外に<strong>使用してはならない（SHALL NOT</strong>）。加入者の属性は、<a href="/800-63-4-2ndPD/sp800-63c/Federation/#store-subscriber-info">第 3.10.3 節に従って</a>保存および管理さ<strong>れなければならない（SHALL）</strong>。</p>
+<p>加入者の属性は、RPがTrust Agreementに規定された目的以外に<strong>使用してはならない（SHALL NOT</strong>）。加入者の属性は、<a href="/800-63-4-2ndPD/sp800-63c/Federation/#store-subscriber-info">第 3.10.3 節に従って</a>保存および管理さ<strong>れなければならない（SHALL）</strong>。</p>
 
 <p>加入者は、RPへの属性の送信について通知を<strong>受けなければならない（SHALL）</strong>。認可された当事者が組織である場合、組織は、認可された RP のリストと、それらの RP に送信された属性の関連セットをサブスクライバが利用できるように<strong>しなければならない[SHALL]</strong>。認可された当事者が加入者である場合、加入者は、<a href="/800-63-4-2ndPD/sp800-63c/GenIdP/#idp-runtime-decision">4.6.1.3 節に</a>記述されるように、IdP における実行時決定を使用して、属性のリリース前にプロンプトさ<strong>れなければならない（SHALL）</strong>。</p>
 <h2 id="rp-account" data-section="3">
@@ -1165,7 +1165,7 @@
 
 <div latex-literal="true" class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>\クリアページ</code></pre></div></div>
 
-<p>RPがこの種のアクセスを許可する場合、RPは信託契約の中で開示<strong>しなければならない（SHALL）</strong>：</p>
+<p>RPがこの種のアクセスを許可する場合、RPはTrust Agreementの中で開示<strong>しなければならない（SHALL）</strong>：</p>
 
 <ul>
   <li>RP 加入者アカウントの代替Authenticatorを追加および削除するプロセス</li>
@@ -1192,7 +1192,7 @@
   <li>アサーションは、トランザクションに期待される IdP からのものである。</li>
   <li>アサーションを発行した IdP は、アサーションの連携識別子で識別される IdP である。</li>
   <li>アサーションは、RP サブスクライバのアカウントに関連付けられている（エフェメラルである可能性がある）。</li>
-  <li>RP 加入者口座は、信託契約に明記された方法によって RP に提供されている。</li>
+  <li>RP 加入者口座は、Trust Agreementに明記された方法によって RP に提供されている。</li>
 </ul>
 
 <p>アサーションが FAL3 での鍵所有者アサーションである場合、<a href="/800-63-4-2ndPD/sp800-63c/Federation/#idp-managed-bound-authn">第 3.14 節で</a>説明するように、RP 加入者アカウントが認証セッションに関連付けられる前に、アサーションで示されるAuthenticatorが検証さ<strong>れなければならない（SHALL）</strong> <a href="/800-63-4-2ndPD/sp800-63c/Federation/#idp-managed-bound-authn">。</a> アサーションが FAL3 でのバインドAuthenticatorによる認証も必要とする場合、<a href="/800-63-4-2ndPD/sp800-63c/Federation/#bound-authn">第 3.15 節で</a>説明するように、RP 加入者アカウントが 認証セッションに関連付けられる前に、バインドAuthenticatorが検証さ<strong>れなければならない（SHALL）</strong> <a href="/800-63-4-2ndPD/sp800-63c/Federation/#idp-managed-bound-authn">。</a></p>
@@ -1252,7 +1252,7 @@
   <li>特定の加入者が情報の送信を要求した場合</li>
 </ul>
 
-<p>IdP は、信託契約により規定され開示されている場合、以下の場合にも加入者情報を<strong>送信しても よい（MAY）</strong>：</p>
+<p>IdP は、Trust Agreementにより規定され開示されている場合、以下の場合にも加入者情報を<strong>送信しても よい（MAY）</strong>：</p>
 
 <ul>
   <li>ID サービスに関連する詐欺行為の軽減、</li>
@@ -1605,7 +1605,7 @@
   
 </h2>
 
-<p>加入者アカウントを IdP を通じて利用できるようにするには、加入者アカウントを IdP でプロビジョニングする必要がある。加入者アカウントが IdP にプロビジョニングされる手段は、信託契約において開示さ<strong>れるも のとする</strong>。</p>
+<p>加入者アカウントを IdP を通じて利用できるようにするには、加入者アカウントを IdP でプロビジョニングする必要がある。加入者アカウントが IdP にプロビジョニングされる手段は、Trust Agreementにおいて開示さ<strong>れるも のとする</strong>。</p>
 
 <p>IdP がサブスクライバを認証できることが要件であるため、IdP は多くの場合、CSP のサービスであり、IdP はサブスクライバ・アカウントの属性およびAuthenticatorへのある程度のアクセス権を持っている。このような IdP は一般に、サブスクライバ・アカウントを収容する IdAM と同じセキュリティ・ドメイン内にある。他の場合、加入者アカウントの 1 つ以上のAuthenticatorは、共通の PKI に結び付けられたAuthenticatorなど、セキュリ ティ・ドメインの外部で検証することができる。</p>
 
@@ -1617,14 +1617,14 @@
 <h2 id="federation-transaction" data-section="4">
   
   
-    連盟取引 <a href="#federation-transaction" class="header-link"><i class="fa fa-link"></i></a>
+    フェデレーション取引 <a href="#federation-transaction" class="header-link"><i class="fa fa-link"></i></a>
   
   
 </h2>
 
 <p>汎用の IdP を含むフェデレーション・トランザクションは、IdP で加入者アカウントを確立し、RP で加入者の認証セッションに至る。このプロセスを<a href="/800-63-4-2ndPD/sp800-63c/GenIdP/#fig-6">図 6 に</a>示す。</p>
 
-<p latex-ignore="true"><a href="/800-63-4-2ndPD/sp800-63c/Federation/#fig-6" name="fig-6">図6.連盟の概要</a></p>
+<p latex-ignore="true"><a href="/800-63-4-2ndPD/sp800-63c/Federation/#fig-6" name="fig-6">図6.フェデレーションの概要</a></p>
 
 <p><img src="/800-63-4-2ndPD/sp800-63c/images/federation.png" alt="Overview diagram of federated authentication systems showing parties involved and major steps in the process." title="Federation Overview" latex-src="federation.pdf" latex-fig="6" latex-place="h" /></p>
 
@@ -1638,7 +1638,7 @@
     <p>加入者アカウントは、IdP でプロビジョニングされる。IdP は、サブジェクト識別子などのフェデレーション固有の属性でサブスクライバ・アカウントを補強する。</p>
   </li>
   <li>
-    <p>IdP と RP は、フェデレーション・プロトコルにおいて当事者間で情報を安全に交換するために必 要な暗号鍵と識別子を確立するために、発見と登録を実行する。(アプリオリな信頼合意による)接続許可を表す既存のポリシー決定があったかもしれないが、この段階は技術レベルでの接続と統合を伴う。この段階は、加入者が RP にアクセスしようとする前に、または加入者が RP で IdP を使用しようとしたときの応答として発生する可能性がある。</p>
+    <p>IdP と RP は、フェデレーション・プロトコルにおいて当事者間で情報を安全に交換するために必 要な暗号鍵と識別子を確立するために、発見と登録を実行する。(アプリオリなTrust Agreementによる)接続許可を表す既存のポリシー決定があったかもしれないが、この段階は技術レベルでの接続と統合を伴う。この段階は、加入者が RP にアクセスしようとする前に、または加入者が RP で IdP を使用しようとしたときの応答として発生する可能性がある。</p>
   </li>
   <li>
     <p>IdP と RP は、加入者を RP に認証するために、連携認証トランザクションを開始する。この一環として、RP に渡される属性のセットは、RP が要求したもの、信頼協定で許可され ているもの、および被認証者が許可しているもののサブセットから選択される。必要であれば、認可された当事者は実行時に属性の解放を承認するよう促される。</p>
@@ -1665,26 +1665,26 @@
 <h2 id="trust-agreements" data-section="4">
   
   
-    信託契約 <a href="#trust-agreements" class="header-link"><i class="fa fa-link"></i></a>
+    Trust Agreement <a href="#trust-agreements" class="header-link"><i class="fa fa-link"></i></a>
   
   
 </h2>
 
-<p>信託契約は、以下のいずれかの方法で結ば<strong>れなければならない</strong>：</p>
+<p>Trust Agreementは、以下のいずれかの方法で結ば<strong>れなければならない</strong>：</p>
 
 <ul>
-  <li>連盟取引に先立ち、連盟当事者による合意の結果として、または</li>
+  <li>フェデレーション取引に先立ち、フェデレーション当事者による合意の結果として、または</li>
   <li>フェデレーション・トランザクションの間、加入者による決定または行為の結果として。</li>
 </ul>
 <h3 id="apriori-trust-agreement-establishment" data-section="4">
   
   
-    アプリオリ信託契約締結 <a href="#apriori-trust-agreement-establishment" class="header-link"><i class="fa fa-link"></i></a>
+    アプリオリTrust Agreement締結 <a href="#apriori-trust-agreement-establishment" class="header-link"><i class="fa fa-link"></i></a>
   
   
 </h3>
 
-<p>連携トランザクションの前に連携当事者によって信頼合意が確立される場合、信頼合意は、IdP と RP の関係<strong>ごとに異なってもよい（MAY）</strong>以下の条件を確立<strong>しなければならない（SHALL）</strong>：</p>
+<p>連携トランザクションの前に連携当事者によってTrust Agreementが確立される場合、Trust Agreementは、IdP と RP の関係<strong>ごとに異なってもよい（MAY）</strong>以下の条件を確立<strong>しなければならない（SHALL）</strong>：</p>
 
 <ul>
   <li>CSP がサブスクライバ・アカウントの一部として IdP に提供するサブスクライバ属性のセット。</li>
@@ -1704,7 +1704,7 @@
   <li>RPが要求するxAL</li>
 </ul>
 
-<p>信託契約の条項は、その設立時に RP および IdP のオペレータが入手できる<strong>ものとする</strong>。信託契約の条項は、IdP または RP への要求に応じて加入者が利用できるように<strong>しなければならない（SHALL）</strong>。</p>
+<p>Trust Agreementの条項は、その設立時に RP および IdP のオペレータが入手できる<strong>ものとする</strong>。Trust Agreementの条項は、IdP または RP への要求に応じて加入者が利用できるように<strong>しなければならない（SHALL）</strong>。</p>
 
 <p>IdP と RP はそれぞれ、苦情または問題の解決を達成するための有効性について、それぞれの救済機 構を評価し、この評価結果をTrust Agreementの一部として開示<strong>しなければならない（SHALL）</strong>。救済メカニズムの追加要件および考慮事項については、<a href="/800-63-4-2ndPD/sp800-63c/Federation/#redress">第 3.4.3 節を</a>参照のこと。</p>
 
@@ -1721,11 +1721,11 @@
 
 <p>IdP と RP は、システムの機能を実現するために必要な最小限のデータのみを交換<strong>しなければならない</strong>。</p>
 
-<p>信託契約は、それが依然として目的に適合していることを確認し、不必要なデータ交 換や加入者データの過剰収集を回避するために、定期的に<strong>見直さなければならない（SHALL）</strong>。</p>
+<p>Trust Agreementは、それが依然として目的に適合していることを確認し、不必要なデータ交 換や加入者データの過剰収集を回避するために、定期的に<strong>見直さなければならない（SHALL）</strong>。</p>
 <h3 id="subscriber-driven-trust-agreement-establishment" data-section="4">
   
   
-    加入者主導による信託契約の成立 <a href="#subscriber-driven-trust-agreement-establishment" class="header-link"><i class="fa fa-link"></i></a>
+    加入者主導によるTrust Agreementの成立 <a href="#subscriber-driven-trust-agreement-establishment" class="header-link"><i class="fa fa-link"></i></a>
   
   
 </h3>
@@ -1748,7 +1748,7 @@
 
 <p>加入者属性の解放は、<a href="/800-63-4-2ndPD/sp800-63c/GenIdP/#idp-runtime-decision">4.6.1.3 節に</a>記述されるように、IdP での実行時決定を使用して管理さ<strong>れなけれ ばならない（SHALL）</strong>。認可された当事者は加入者と<strong>する</strong>。</p>
 
-<p>以下の信託契約の条項は、実行時決定の間にサブスクライバーに開示さ<strong>れなければならない[SHALL]：</strong></p>
+<p>以下のTrust Agreementの条項は、実行時決定の間にサブスクライバーに開示さ<strong>れなければならない[SHALL]：</strong></p>
 
 <ul>
   <li>RP が要求する加入者属性のセット（IdP が提供する属性のサブセット）。</li>
@@ -1814,7 +1814,7 @@
 <ul>
   <li>属性リリースの承認</li>
   <li>アサーションの作成と発行</li>
-  <li>加入者主導の信託契約の成立。</li>
+  <li>加入者主導のTrust Agreementの成立。</li>
 </ul>
 
 <p>セッション管理と再認証に関する追加要件は、<a href="/800-63-4-2ndPD/sp800-63c/GenIdP/#federation-session">セクション4.7で</a>議論する。</p>
@@ -1826,7 +1826,7 @@
   
 </h2>
 
-<p>フェデレーション取引を進めるかどうかの決定は<strong>、</strong>信託契約によって規定された権限を付与され た当事者によって決定さ<strong>れなければならない（SHALL）</strong>。この決定は、以下を含む様々な方法で算出することができる：</p>
+<p>フェデレーション取引を進めるかどうかの決定は<strong>、</strong>Trust Agreementによって規定された権限を付与され た当事者によって決定さ<strong>れなければならない（SHALL）</strong>。この決定は、以下を含む様々な方法で算出することができる：</p>
 
 <ul>
   <li>これは、システムが自動化された方法でフェデレーション・トランザクションの進行を許可できる状況を決定する；</li>
@@ -2096,7 +2096,7 @@
   
 </h2>
 
-<p>環境によっては、IdP と RP がフェデレーション・トランザクションの外で相互に情報を送信することが有用で ある。これらのシグナ ルは、他の方法では知ることができない重要な状態の変化を当事者間で伝達することができる。共有シグナリングの使用は、IdP と RP 間のTrust Agreementに文書化<strong>しなければならない（SHALL）</strong>。IdP から RP へのシグナリングは<strong>、</strong>事前の信頼合意を必要と<strong>しなければならない（SHALL）</strong>。RP から IdP へのシグナリングは、アプリオリおよびサブスクライバ主導のTrust Agreementの両方で<strong>使用してもよい （MAY）</strong>。</p>
+<p>環境によっては、IdP と RP がフェデレーション・トランザクションの外で相互に情報を送信することが有用で ある。これらのシグナ ルは、他の方法では知ることができない重要な状態の変化を当事者間で伝達することができる。共有シグナリングの使用は、IdP と RP 間のTrust Agreementに文書化<strong>しなければならない（SHALL）</strong>。IdP から RP へのシグナリングは<strong>、</strong>事前のTrust Agreementを必要と<strong>しなければならない（SHALL）</strong>。RP から IdP へのシグナリングは、アプリオリおよびサブスクライバ主導のTrust Agreementの両方で<strong>使用してもよい （MAY）</strong>。</p>
 
 <p>共有シグナリングの使用はすべて文書化され、トラスト契約によって規定された 権限を持つ当事者が利用できるように<strong>しなければならない(SHALL)</strong>。この文書には、シグナルが送信されるイベント、シグナルに含まれる情報（属性情報を含む）、シグナルとともに送信される追加パラメータを<strong>含めなければならない（SHALL）</strong>。共有シグナリングの使用は、Trust Agreementに基づくプライバシーのレビューに従う<strong>ものとする。</strong></p>
 
@@ -2181,7 +2181,7 @@
   <li><em>時間の検証</em>：有効期限と発行時間が現在のタイムスタンプの許容範囲内であることを確認する。</li>
   <li><em>対象者の制限</em>：この RP がアサーションの意図された受信者であることを保証する。</li>
   <li><em>Nonce</em>:RPのリクエストに含まれる暗号化Nonce(該当する場合)がプレゼンテーションに 含まれていることを保証する。</li>
-  <li><em>取引条件</em>：アサーションが表す IAL、AAL、FAL が、適用される信託契約に基づき許容されるものであること。</li>
+  <li><em>取引条件</em>：アサーションが表す IAL、AAL、FAL が、適用されるTrust Agreementに基づき許容されるものであること。</li>
 </ul>
 
 <p>RP は<strong>、</strong>サブジェクト識別子を本質的にグローバルに一意でないものとして扱う<strong>ものとする。</strong>その代わりに、<a href="/800-63-4-2ndPD/sp800-63c/Federation/#federated-identifier">3.3 節で</a>説明するように、アサーションのサブジェクト識別子の値は、通常、 アサーション発行者の管理下にある名前空間内にある。これにより、RP は、異なる IdP からのサブジェクトを誤って混同することなく、複数の IdP と対話することができる。</p>
@@ -2329,7 +2329,7 @@
 <h2 id="federation-transaction" data-section="5">
   
   
-    連盟取引 <a href="#federation-transaction" class="header-link"><i class="fa fa-link"></i></a>
+    フェデレーション取引 <a href="#federation-transaction" class="header-link"><i class="fa fa-link"></i></a>
   
   
 </h2>
@@ -2356,16 +2356,16 @@
 <h2 id="trust-agreements" data-section="5">
   
   
-    信託契約 <a href="#trust-agreements" class="header-link"><i class="fa fa-link"></i></a>
+    Trust Agreement <a href="#trust-agreements" class="header-link"><i class="fa fa-link"></i></a>
   
   
 </h2>
 
 <p>サブスクライバが管理するウォレットを含むトランザクションのTrust Agreementは、RP と CSP の間で確立さ<strong>れなければならない（SHALL）</strong>。Trust Agreementは、<a href="/800-63-4-2ndPD/sp800-63c/Federation/#authorities">セクション 3.4.2</a> で説明されているように、フェデレーション・オーソリティを使用することで<strong>促進してもよい（MAY）</strong>。</p>
 
-<p>ほとんどの場合、RP は(IdP として機能する)ウォレットと直接的な信頼関係を持たず、代わりにウォレットと CSP との確立された関係を通じてウォレットを過渡的に信頼する。この関係は、<a href="/800-63-4-2ndPD/sp800-63c/Federation/#attribute-bundles">セクション 3.11.1</a> で説明されているように、属性バンドルによって検証することができる。ウォレットは通常、信頼合意を確立するプロセスに関与しないが、RP と CSP の間の信頼合意は、アプリオリまたはサブスクライバ主導のいずれかの方法で達成することができる。</p>
+<p>ほとんどの場合、RP は(IdP として機能する)ウォレットと直接的な信頼関係を持たず、代わりにウォレットと CSP との確立された関係を通じてウォレットを過渡的に信頼する。この関係は、<a href="/800-63-4-2ndPD/sp800-63c/Federation/#attribute-bundles">セクション 3.11.1</a> で説明されているように、属性バンドルによって検証することができる。ウォレットは通常、Trust Agreementを確立するプロセスに関与しないが、RP と CSP の間のTrust Agreementは、アプリオリまたはサブスクライバ主導のいずれかの方法で達成することができる。</p>
 
-<p>信託契約には以下を<strong>含めなければならない</strong>。</p>
+<p>Trust Agreementには以下を<strong>含めなければならない</strong>。</p>
 
 <ul>
   <li>CSP が属性バンドルでウォレットに提供するサブスクライバ属性のセット。</li>
@@ -2556,7 +2556,7 @@
   <li><em>時間の検証</em>：有効期限と発行時間が現在のタイムスタンプの許容範囲内であることを確認する。</li>
   <li><em>対象者の制限</em>：この RP がアサーションの意図された受信者であることを保証する。</li>
   <li><em>Nonce</em>:RPのリクエストに含まれる暗号化Nonceがプレゼンテーションに 含まれることを保証する。</li>
-  <li><em>取引条件</em>：アサーションが表す IAL、AAL、FAL が、適用される信託契約に基づき許容されるものであること。</li>
+  <li><em>取引条件</em>：アサーションが表す IAL、AAL、FAL が、適用されるTrust Agreementに基づき許容されるものであること。</li>
 </ul>
 
 <p>さらに、発行者は、RPが問い合わせ可能なステータスリストなど、与えられた属性バンドル の有効性を判断するためのオンラインメカニズムを利用<strong>可能にしてもよい(MAY)</strong>。</p>
@@ -2570,7 +2570,7 @@
 
 <p>RP 加入者アカウントは、ジャストインタイムまたはエフェメラル・プロビジョニング・モデルのみを 使用して管理<strong>しなければならない（</strong> <a href="/800-63-4-2ndPD/sp800-63c/GenIdP/#provisioning">セクション 4.6.3</a> 参照）。これらのいずれの場合も、RP は、ウォレットからのアサーションの検証に成功した後にのみ、RP 加入者アカウントを作成し、連携識別子と関連付ける。</p>
 
-<p>RP は<strong>、</strong>信託契約の一部として、加入者情報の管理方法を開示<strong>しなければならない</strong>。RP は<strong>、</strong>RP 加入者アカウントから情報を修正および削除するために、加入者に効果的な救済手 段を提供<strong>しなければならない（SHALL）</strong>。救済メカニズムの追加要件および考慮事項については、<a href="/800-63-4-2ndPD/sp800-63c/Federation/#redress">第 3.4.3 節を</a>参照のこと。</p>
+<p>RP は<strong>、</strong>Trust Agreementの一部として、加入者情報の管理方法を開示<strong>しなければならない</strong>。RP は<strong>、</strong>RP 加入者アカウントから情報を修正および削除するために、加入者に効果的な救済手 段を提供<strong>しなければならない（SHALL）</strong>。救済メカニズムの追加要件および考慮事項については、<a href="/800-63-4-2ndPD/sp800-63c/Federation/#redress">第 3.4.3 節を</a>参照のこと。</p>
 
 <h1 id="security" data-section="6">
   
@@ -2586,7 +2586,7 @@
 <h2 id="federation-threats" data-section="6">
   
   
-    連盟の脅威 <a href="#federation-threats" class="header-link"><i class="fa fa-link"></i></a>
+    フェデレーションの脅威 <a href="#federation-threats" class="header-link"><i class="fa fa-link"></i></a>
   
   
 </h2>
@@ -2595,12 +2595,12 @@
 
 <p>連携システムでは、IdP に対する攻撃が成功すると、ID およびセキュリティ情報をその IdP に依存する RP に伝播する可能性がある。結果として、ある機関の RP を標的にした IdP に対する攻撃は、別の機関の RP に拡散する可能性がある。さらに、単一の加入者アカウントが連携システムで複数の RP に利用可能になるため、IdP が異なる RP に提供できる証明戦略への調整および証明プロセスへの可視性には、潜在的な制限がある。ただし、IdP が加入者アカウント集団ごとに異なるユースケースをサポートできる場合、各 RP とのTrust Agreementでこれらの条件を変えることができる。さらに、IdPは各RPに異なる属性を開示できるが、加入者アカウントは、すべてのRPが利用可能なすべての属性の結合を含む必要がある。このプラクティスは、RPに対する攻撃の被害を制限するが、逆にIdPを攻撃者にとってより説得力のある標的にする。</p>
 
-<p latex-ignore="true"><a href="/800-63-4-2ndPD/sp800-63c/security/#table-2" name="table-2">表2.連盟の脅威</a></p>
+<p latex-ignore="true"><a href="/800-63-4-2ndPD/sp800-63c/security/#table-2" name="table-2">表2.フェデレーションの脅威</a></p>
 
 <table latex-table="2" latex-caption="Federation Threats" latex-columns="p@0.20\textwidth,p@0.35\textwidth,p@0.35\textwidth">
   <thead>
     <tr>
-      <th>連盟の脅威／攻撃</th>
+      <th>フェデレーションの脅威／攻撃</th>
       <th>説明</th>
       <th>例</th>
     </tr>
@@ -2663,7 +2663,7 @@
 <table latex-table="3" latex-caption="Mitigating Federation Threats" latex-columns="p@0.20\textwidth,p@0.55\textwidth,p@0.15\textwidth">
   <thead>
     <tr>
-      <th>連盟の脅威／攻撃</th>
+      <th>フェデレーションの脅威／攻撃</th>
       <th>脅威軽減メカニズム</th>
       <th>参考文献</th>
     </tr>
@@ -2804,7 +2804,7 @@
 <h2 id="blinding" data-section="7">
   
   
-    代理連盟における目隠し <a href="#blinding" class="header-link"><i class="fa fa-link"></i></a>
+    プロキシされたフェデレーションにおけるBlinding <a href="#blinding" class="header-link"><i class="fa fa-link"></i></a>
   
   
 </h2>
@@ -3075,7 +3075,7 @@
 
 <p>同意ダイアログおよび通知がユーザーに送信される場合、加入者の理解を促進し、軽率なクリックスルーを避けるために、これらのコンテンツは、異なる加入者集団に合わせて調整されるべきである。</p>
 
-<p>IdP は、加入者アカウントに記録された各加入者に使用されるプルーフ方法を開示することが求 められる。これには、利用可能なすべての形式のプルーフィングと例外処理、および場合によっては信託契約に定義された代償管理が含まれる。IdP および CSP は、特定のサブスクライバ集団に対する偏った処理を回避するために、サブスクライ バ・アカウントに含まれるプルーフィング情報以外の例外処理または補償管理を利用しなければ ならないサブスクライバを特定すべきではない。</p>
+<p>IdP は、加入者アカウントに記録された各加入者に使用されるプルーフ方法を開示することが求 められる。これには、利用可能なすべての形式のプルーフィングと例外処理、および場合によってはTrust Agreementに定義された代償管理が含まれる。IdP および CSP は、特定のサブスクライバ集団に対する偏った処理を回避するために、サブスクライ バ・アカウントに含まれるプルーフィング情報以外の例外処理または補償管理を利用しなければ ならないサブスクライバを特定すべきではない。</p>
 
 <p>フェデレーショントランザクションはセキュリティドメインの境界を越えることを意図しているため、IdP と RP の利害の不一致は、さらなる考慮事項をもたらす可能性がある。このような要件の相違は、これらの当事者間の接続を管理する信頼協定で対処しなければならず、透明な報告のような慣行は、ある種の不一致に対処するのに役立つ。さらに、あるサービスに対する（RPにとっての）代替IdPと（IdPにとっての）RPの利用可能性は、システム全体の公平性を高めるのに役立つ。例えば、官民連携において、連邦の RP にアクセスするために民間の IdP が使用される場合、あるいは民間の RP にアクセスするために連邦の IdP が使用される場合、官民のシステムは、異なる動機によって駆動され、衡平性、アクセシビリティ、透明性の面で異なる要件に拘束される可能性がある。</p>
 
@@ -3158,7 +3158,7 @@
 <h2 id="multilateral-federation-network" data-section="10">
   
   
-    多国間連盟ネットワーク <a href="#multilateral-federation-network" class="header-link"><i class="fa fa-link"></i></a>
+    多国間フェデレーションネットワーク <a href="#multilateral-federation-network" class="header-link"><i class="fa fa-link"></i></a>
   
   
 </h2>
@@ -3260,7 +3260,7 @@
 <h2 id="authorized-party-example" data-section="10">
   
   
-    複数の異なる権限者と信託契約 <a href="#authorized-party-example" class="header-link"><i class="fa fa-link"></i></a>
+    複数の異なる権限者とTrust Agreement <a href="#authorized-party-example" class="header-link"><i class="fa fa-link"></i></a>
   
   
 </h2>
@@ -3273,7 +3273,7 @@
   <dt>個人の承認者</dt>
   <dd>別のサービス（別のRP）のために、別のアプリオリTrust Agreementが機関によって確立され、このサービスは、同じ機関のすべての加入者が利用できるようにされる。このTrust Agreementは、加入者が RP への属性情報の公開を許可された当事者であることを規定する。サービスにログインするとき、各加入者は RP に属性を公開することへの同意を求められる。このプロンプトには、Trust Agreementの詳細へのリンク、公開される属性とその使用目的のリストなど、加入者が適切なセキュリティ決定を行うためのコンテキストが含まれる。IdP は、このサブスクライバが将来この同じ RP にログインするときに、Trust Agreementと RP からの要求が変更されていない限り、サブスクライバに同意のプロンプトが再度表示されないように、サブスクライバにこの同意の決定を保存することを許可する。</dd>
   <dt>加入者主導のサービス・アクセス：</dt>
-  <dd>加入者主導の信頼合意は、加入者が、IdP によって未知の RP にアクセスするときに確立される。RP は、IdP から要求されるすべての属性の用途について加入者に通知し、IdP は、RP に属性を解放することに同意するよう加入者に求める。また、IdP は、RP が機関にとって未知であることを加入者に警告し、加入者が安全な意思決定を行えるように、RP が受信した情報を加入者に提供する。</dd>
+  <dd>加入者主導のTrust Agreementは、加入者が、IdP によって未知の RP にアクセスするときに確立される。RP は、IdP から要求されるすべての属性の用途について加入者に通知し、IdP は、RP に属性を解放することに同意するよう加入者に求める。また、IdP は、RP が機関にとって未知であることを加入者に警告し、加入者が安全な意思決定を行えるように、RP が受信した情報を加入者に提供する。</dd>
 </dl>
 
 <p>これらのシナリオはすべて、同じ加入者アカウントに関係している。</p>
@@ -3394,7 +3394,7 @@
   <dt>DNS</dt>
   <dd>ドメインネームシステム</dd>
   <dt>ファル</dt>
-  <dd>連盟保証レベル</dd>
+  <dd>フェデレーション保証レベル</dd>
   <dt>フェドランプ</dt>
   <dd>連邦リスク認可管理プログラム</dd>
   <dt>IAL</dt>
@@ -3526,7 +3526,7 @@
   </dd>
   <dt>連合識別子</dt>
   <dd><em>アサーション</em>内の<em>サブジェクト識別子と</em>、そのアサーションを発行した<em>IdP</em>の<em>識別子の</em>組み合わせ。これらの情報を組み合わせると、<em>フェデレーション・トランザク ションの</em>コンテキストにおいて<em>サブスクライバを</em>一意に識別する。</dd>
-  <dt>連盟</dt>
+  <dt>フェデレーション</dt>
   <dd>一連の<em>ネットワーク化された</em>システム間で ID および認証情報の伝達を可能にするプロセス。</dd>
   <dt>フェデレーション保証レベル（FAL）</dt>
   <dd>認証イベントおよびサブスクライバの<em>属性を</em> <em>RP</em> に伝達するために<em>フェデレーション・トランザクショ ンで</em>使用されるプロセスを記述するカテゴリー。</dd>
@@ -3623,7 +3623,7 @@
   <dd><em>暗号</em>操作とその逆を実行するために使用される<em>暗号鍵</em>。(暗号化と復号化、<em>メッセージ認証コードの</em>作成とその検証など）。</dd>
   <dt>トランスポート・レイヤー・セキュリティ（TLS）</dt>
   <dd>ブラウザやウェブサーバに広く実装されている認証とセキュリティのプロトコル。TLSは<a href="/800-63-4-2ndPD/sp800-63c/references/#ref-RFC5246">[RFC5246]</a>で定義されている。TLSは古いSSLプロトコルに似ており、TLS 1.0は事実上SSLバージョン3.1である。SP 800-52、Guidelines for the Selection and Use of Transport Layer Security (TLS) Implementations<a href="/800-63-4-2ndPD/sp800-63c/references/#ref-SP800-52">[SP800-52]</a>は、政府アプリケーションでTLSをどのように使うかを規定している。</dd>
-  <dt>信託契約</dt>
+  <dt>Trust Agreement</dt>
   <dd>サブスクライバと RP 間で認証<em>セッションを</em>確立する目的で、<em>CSP</em>、<em>IdP</em>、および<em>RP</em>が<em>フェデレーション・トランザクショ ンに</em>参加することを許可される一連の条件。</dd>
   <dt>ユーザビリティ</dt>
   <dd>特定の使用者が、特定の使用状況において、特定の目標を達成するために、製品を効果的、効率的、 かつ満足感をもって使用できる程度。<a href="/800-63-4-2ndPD/sp800-63c/references/#ref-ISOIEC9241">[ISO/IEC9241-11】。］</a></dd>
@@ -3649,7 +3649,7 @@
     <p>フェデレーション・プロセスの個別のステップとして、トラスト・アグリーメントと登録／ディスカバリー（キーの確立）を確立。</p>
   </li>
   <li>
-    <p>すべてのFALには、信託契約の成立と登録に関する要件がある。</p>
+    <p>すべてのFALには、Trust Agreementの成立と登録に関する要件がある。</p>
   </li>
   <li>
     <p>FAL 定義に暗号化要件はもはやない。暗号化は、FAL に関係なく、信頼できないパーティを経由してアサーション内の PII を渡すことでトリガされる。</p>
