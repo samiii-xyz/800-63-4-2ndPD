@@ -30,7 +30,7 @@
     <![endif]-->
 
     
-    <title>NIST SP 800-63 デジタル・アイデンティティ・ガイドライン</title>
+    <title>NIST SP 800-63 Digital Identity Guidelines</title>
     <meta property="og:title" content="NIST SP 800-63 Digital Identity Guidelines" />
     
 
@@ -49,7 +49,7 @@
         <div class="section-container">
         <h2 id="call-for-comments-on-second-public-draft-of-revision-4">改訂第4版第2次草案に対する意見募集</h2>
 
-<p>NIST は、特別刊行物 800-63「<em>デジタル ID ガイドライン</em>」の 4 巻からなる一連の文書の第 4 改訂草案に対するコメントを求めている。  本書は、各巻で指定されたデジタル ID 管理保証レベルを満たすためのプロセスと技術要件を提 示する。また、デジタル ID ソリューションおよびテクノロジのプライバシー、公平性、および使いやすさを強化するための考慮事項も示している。</p>
+<p>NIST は、SP 800-63「<em>デジタル ID ガイドライン</em>」の 4巻からなる一連の文書の第4改訂草案に対するコメントを求めている。  本書は、各巻で指定されたデジタル ID 管理保証レベルを満たすためのプロセスと技術要件を提 示する。また、デジタル ID ソリューションおよびテクノロジのプライバシー、公平性、および使いやすさを強化するための考慮事項も示している。</p>
 
 <p>NISTは、すべてのコメントを<strong>2024年10月7日午後11時59分（米国東部時間）までに</strong>提出するよう要請している。ご意見は<a href="mailto:dig-comments@nist.gov">dig-comments@nist.gov</a> までお寄せください<a href="mailto:dig-comments@nist.gov">。</a>NIST が意見を求めている具体的なトピックについては、以下の「<a href="#ntr">レビュアーへの注意</a>」セクションを参照されたい。NIST はすべてのコメントを検討し、<a href="https://www.nist.gov/identity-access-management">NIST Identity and Access Management ウェブサイトで</a>公開する。コメント提出者は、<a href="https://csrc.nist.gov/pubs/sp/800/63/4/2pd">NIST コンピュータセキュリティリソースセンタのウェブサイ トで</a>提供されているコメントテンプレートを使用することが推奨される。</p>
 
@@ -70,21 +70,21 @@
     <a href="sp800-63aja.html"><img src="assets/63a.png" alt="SP 800-63A-4" width="150px" height="150px" /></a>
   </div>
   <h3><a href="sp800-63aja.html">SP 800-63A</a></h3>
-  <h6>身分証明と登録</h6>
+  <h6>身元確認と登録<BR>(Identity Proofing & Enrollment)</h6>
 </li>
 <li>
   <div>
     <a href="sp800-63bja.html"><img src="assets/63b.png" alt="SP 800-63B-4" width="150px" height="150px" /></a>
   </div>
   <h3><a href="sp800-63bja.html">SP 800-63B</a></h3>
-  <h6>認証と認証者管理</h6>
+  <h6>認証とAuthenticator管理<BR>(Authentication & Authenticator Management)</h6>
 </li>
 <li>
   <div>
     <a href="sp800-63cja.html"><img src="assets/63c.png" alt="SP 800-63C-4" width="150px" height="150px" /></a>
   </div>
   <h3><a href="sp800-63cja.html">SP 800-63C</a></h3>
-  <h6>連盟とアサーション</h6>
+  <h6>フェデレーションとアサーション<BR>(Federation & Assertions)</h6>
 </li>
 </ul>
 
@@ -120,31 +120,31 @@
     <p>リスク管理とアイデンティティ・モデル</p>
 
     <ul>
-      <li>ユーザが管理する」ウォレット・モデルは、モバイル運転免許証や検証可能なクレデンシャルなど のウォレットベースのソリューションの実際の実装との整合性をエンティティが理解できるように、十 分に説明されているか。</li>
+      <li>「ユーザが管理する」ウォレット・モデルは、モバイル運転免許証や検証可能なクレデンシャル（verifiable credentials）など のウォレットベースのソリューションの実際の実装との整合性をエンティティが理解できるように、十分に説明されているか。</li>
       <li>更新されたリスク管理プロセスは、オンライン・サービスおよびシステムを保護するためにデジタル ID システム・ソリューションの実装を模索する組織にとって、効果的で反復可能な実際のプロセスをサポートするために十分に定義されているか。</li>
     </ul>
   </li>
   <li>
-    <p>身分証明と登録</p>
+    <p>身元確認と登録</p>
 
     <ul>
       <li>定義されたプルーフィングのタイプに関する要求事項の更新構造は十分に明確か？タイプは十分に説明されているか？</li>
       <li>CSP やその他の組織の共通基準として導入する必要のある追加的な不正プログラム要件はあるか。</li>
       <li>不正行為の要件は、不正行為、プライバシー、ユーザビリティのトレードオフの適切なバランスを可能にするよう十分に記述されているか。</li>
-      <li>追加される ID エビデンスの検証および真正性の要件とパフォーマンス指標は、既存の技術能力で 現実的かつ達成可能か。</li>
+      <li>追加されるアイデンティティエビデンスの検証および真正性の要件とパフォーマンス指標は、既存の技術能力で現実的かつ達成可能か。</li>
     </ul>
   </li>
   <li>
-    <p>認証と認証子管理</p>
+    <p>認証とAuthenticator管理</p>
 
     <ul>
-      <li>同期可能な認証子の要件は、一般向けおよび企業向けの用途において、同期可能な認証子を合理的 なリスクに基づき受け入れることを可能にするよう、十分に定義されているか。</li>
+      <li>同期可能なAuthenticatorの要件は、一般向けおよび企業向けの用途において、同期可能なAuthenticatorを合理的なリスクに基づき受け入れることを可能にするよう、十分に定義されているか。</li>
       <li>適用すべき追加的な推奨コントロールはあるか？具体的な実施上の推奨事項や考慮すべき事項はあるか？</li>
-      <li>ウォレットベースの認証メカニズムおよび「属性バンドル」は、認証子として十分に説明されて いるか。追加または明確にする必要のある追加要件はあるか。</li>
+      <li>ウォレットベースの認証メカニズムおよび「属性バンドル」は、Authenticatorとして十分に説明されているか。追加または明確にする必要のある追加要件はあるか。</li>
     </ul>
   </li>
   <li>
-    <p>連盟とアサーション</p>
+    <p>フェデレーションとアサーション</p>
 
     <ul>
       <li>ユーザが管理するウォレットと属性バンドルの概念は、実際の実装をサポートするために十分かつ明確に記述されていますか？これらの技術のセキュリティ、ユーザビリティ、プライバシーを向上させるために追加すべき要件や考慮事項はありますか？</li>
@@ -155,14 +155,14 @@
 
     <ul>
       <li>デジタル ID ガイドラインおよび今後の反復をより迅速に採用し実施するために、具体的な実 施ガイダンス、参照アーキテクチャ、測定基準、またはその他の支援リソースは何か。</li>
-      <li>どのような応用研究と測定の取り組みが、ID 市場とこれらのガイドラインの進展に最も大きな影響 をもたらすだろうか？</li>
+      <li>どのような応用研究と測定の取り組みが、ID 市場とこれらのガイドラインの進展に最も大きな影響をもたらすだろうか？</li>
     </ul>
   </li>
 </ol>
 
 <p>レビュワーは、SP 800-63-4 一式の全 4 巻の草案の本文に対してコメントし、変更を提案することが推奨される。NISTは、すべてのコメントを2024年10月7日午後11時59分（米国東部時間）までに提出するよう求めています。ご意見は<a href="mailto:dig-comments@nist.gov">dig-comments@nist.gov</a> までお寄せください<a href="mailto:dig-comments@nist.gov">。</a>NIST はすべてのコメントを検討し、<a href="https://www.nist.gov/identity-access-management">NIST Identity and Access Management ウェブサイトで</a>公開する。コメント提出者は、NIST コンピュータセキュリティリソースセンターのウェブサイトに掲載されているコメントテンプレートを使用して、これらのレビュアーへの注意事項に対する回答や、4巻からなる一連の文書に対する具体的なコメントを提出することが推奨される。</p>
 
-<p><strong>注：すべてのコメントと回答は、情報公開法（FOIA）に基づき公開される。  特許請求の範囲の募集は、各草案のiiページに記載されています。詳細については、<a href="https://www.nist.gov/itl/publications-0/itl-patent-policy-inclusion-patents-itl-publications">Information Technology Laboratory (ITL) Patent Policy - Inclusion of Patents in ITL Publicationsを</a>ご参照ください。</strong></p>
+<p><strong>注：すべてのコメントと回答は、情報公開法（FOIA）に基づき公開される。 特許請求の範囲の募集は、各草案のiiページに記載されています。詳細については、<a href="https://www.nist.gov/itl/publications-0/itl-patent-policy-inclusion-patents-itl-publications">Information Technology Laboratory (ITL) Patent Policy - Inclusion of Patents in ITL Publicationsを</a>ご参照ください。</strong></p>
 
         </div>
     </section>
